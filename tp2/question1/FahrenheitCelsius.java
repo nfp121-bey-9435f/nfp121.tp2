@@ -16,12 +16,13 @@ public class FahrenheitCelsius {
     public static void main(String[] args) {
         for (int i=0;i<args.length;i++){
             if(isNullOrEmpty(args[i])){
-            System.out.println("Entrée vide ou nul, veuillez retaper.");}
-            else {
+            System.out.println("Entrée vide ou nul, veuillez ré-entrer.");}
+            
+            //else {
             int fahrenheit = Integer.parseInt(args[i]);
             float celsius = fahrenheitEnCelsius(fahrenheit);
             System.out.println(fahrenheit + "\u00B0F -> " + celsius + "\u00B0C");
-        }
+        //}
         }
     }
 

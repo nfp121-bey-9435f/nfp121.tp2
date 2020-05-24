@@ -14,19 +14,22 @@ public class FahrenheitCelsius {
      * et affiche un message en cas d'erreur
      */
     public static void main(String[] args) {
-        try {
+        
             for (int i=0;i<args.length;i++){
+             
             if(isNullOrEmpty(args[i])){
-            System.out.println("Entrée vide ou nul, veuillez retaper.");}
-            else {
+            System.out.println("Entrée vide ou nul, veuillez ré-entrer.");}
+            //else {
+            try {    
             int fahrenheit = Integer.parseInt(args[i]);
             float celsius = fahrenheitEnCelsius(fahrenheit);
             System.out.println(fahrenheit + "\u00B0F -> " + celsius + "\u00B0C");
+            //}
             }
-            }
-            }
-        catch(NumberFormatException nfe){
+            catch(NumberFormatException nfe){
             System.out.println("Erreur Entrée : " + nfe.getMessage());  // message affiché en cas d'erreur 
+            }
+        
         }
 
     }
